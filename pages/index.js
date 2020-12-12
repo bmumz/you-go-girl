@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import Quotes from "../components/quotes";
+import Button from "../components/button";
 import { siteTitle } from "../components/layout";
+import styles from "../components/layout.module.css";
 
 export default function Home() {
   return (
@@ -13,9 +15,8 @@ export default function Home() {
         </Head>
 
         <main>
-          <h1 className="title">{siteTitle}</h1>
-          <h4>Your daily dose of inspiration!</h4>
           <Quotes />
+          <Button />
         </main>
       </Layout>
     </div>

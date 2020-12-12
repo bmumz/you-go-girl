@@ -1,4 +1,5 @@
 import useSWR from "swr";
+import styles from "../components/layout.module.css";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -8,12 +9,25 @@ export default function Quotes() {
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
 
-  const quote = data.data[0].quote;
-  const source = data.data[0].source;
+  const quoteList = data.data;
 
-  return (
+  const quotes = Object.entries(quoteList).map((item, index) => (
     <div>
-      <h2>"{quote}"</h2> <h3>{source}</h3>
+      <div key={index} className={styles.quote}>
+        <h2>
+          <span className={styles.boxshadow}>"{item[1].quote}"</span>
+        </h2>{" "}
+        {item[1].link === "" ? (
+          <h3>- {item[1].source}</h3>
+        ) : (
+          <h3>
+            - <a href={item[1].link}>{item[1].source} </a>
+          </h3>
+        )}
+      </div>
     </div>
-  );
+  ));
+  const random = quotes[Math.floor(Math.random() * quotes.length)];
+
+  return <div>{random}</div>;
 }
