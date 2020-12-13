@@ -29,7 +29,9 @@
   display: flex;
   justify-content: center;
   height: 3rem;
+  margin-bottom: 3rem;
 }
+
 .quote {
   background-color: RGBA(149, 104, 97, 0.3);
   padding: 1rem 1rem 0;

@@ -1,9 +1,9 @@
 import useSWR from "swr";
-import styles from "../components/layout.module.css";
+import styles from "../styles/layout.module.css";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-export default function Quotes(props) {
+export default function Quotes() {
   const { data, error } = useSWR("/api/quotes", fetcher);
 
   if (error) return <div>failed to load</div>;

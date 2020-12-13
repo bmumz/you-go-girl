@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "./header";
-import styles from "./layout.module.css";
+import styles from "../styles/layout.module.css";
 
 export const siteTitle = "You Go, Girl!";
 
