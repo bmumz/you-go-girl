@@ -3,7 +3,11 @@ import styles from "../components/layout.module.css";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
+<<<<<<< HEAD
 export default function Quotes() {
+=======
+export default function Quotes(props) {
+>>>>>>> 1d711432edb82d6247e917b5a8c34fcd7e2c33bb
   const { data, error } = useSWR("/api/quotes", fetcher);
 
   if (error) return <div>failed to load</div>;
