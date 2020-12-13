@@ -2,7 +2,7 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import Quotes from "../components/quotes";
 import Button from "../components/button";
-import { siteTitle } from "../components/layout";
+import { siteTitle } from "../components/seo";
 
 export default function Home() {
   return (
