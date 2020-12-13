@@ -4,15 +4,12 @@
   justify-content: center;
 }
 
-<<<<<<< HEAD
-=======
 .header {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
->>>>>>> 1d711432edb82d6247e917b5a8c34fcd7e2c33bb
 .img {
   width: 50vw;
   height: auto;
