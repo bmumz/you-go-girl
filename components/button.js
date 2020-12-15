@@ -4,7 +4,7 @@ const handleClick = () => {
   window.location.reload();
 };
 
-export default function Button(props) {
+export default function Button() {
   return (
     <div className={styles.button}>
       <button onClick={handleClick}>Generate New Quote</button>

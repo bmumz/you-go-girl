@@ -15,10 +15,8 @@ body {
 }
 
 a {
-  color: #6b6b6b;
+  color: #333333;
   text-decoration: none;
-  font-weight: 300;
-  letter-spacing: 1px;
 }
 
 a:hover {
