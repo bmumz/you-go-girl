@@ -1,24 +1,28 @@
 import styles from "../styles/layout.module.css";
 
 export default function Quote(props) {
-  const getRandomKey = Math.floor(Math.random() * props.quoteCount);
-
-  const getRandomQuote = props.quoteList.props.children[getRandomKey];
+  const quoteEntry = props.quote;
 
   return (
     <div suppressHydrationWarning={true}>
-      <div key={getRandomKey} className={styles.quoteBox}>
-        <div className={styles.quote}>
-          <h2>
-            <span className={styles.highlight}> {getRandomQuote.quote}</span>{" "}
+      <div className={styles.quoteBox} suppressHydrationWarning={true}>
+        <div className={styles.quote} suppressHydrationWarning={true}>
+          <h2 suppressHydrationWarning={true}>
+            <span className={styles.highlight} suppressHydrationWarning={true}>
+              {" "}
+              {quoteEntry.quote}
+            </span>{" "}
           </h2>{" "}
         </div>
 
-        {getRandomQuote.link === "" ? (
-          <h3>- {getRandomQuote.author}</h3>
+        {quoteEntry.link === "" ? (
+          <h3 suppressHydrationWarning={true}>- {quoteEntry.author}</h3>
         ) : (
           <h3>
-            - <a href={getRandomQuote.link}>{getRandomQuote.author} </a>
+            -{" "}
+            <a href={quoteEntry.link} suppressHydrationWarning={true}>
+              {quoteEntry.author}{" "}
+            </a>
           </h3>
         )}
       </div>

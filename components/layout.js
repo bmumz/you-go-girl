@@ -6,9 +6,9 @@ export default function Layout({ children }) {
   return (
     <div className={styles.container}>
       <Seo />
-      <main className={styles.flex}>
+      <main className={styles.flex} suppressHydrationWarning={true}>
         <Header />
-        <div>{children}</div>
+        <div suppressHydrationWarning={true}>{children}</div>
       </main>
     </div>
   );
